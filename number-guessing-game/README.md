@@ -11,7 +11,7 @@ A simple command-line number guessing game written in Java.
 Compile the Java file:
 
 ```sh
-javac numberGuessingGame.java
+cd number-guessing-game && javac numberGuessingGame.java
 ```
 
 Run the game:
