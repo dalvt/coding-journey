@@ -1,6 +1,7 @@
 # Number Guessing Game
 
 A simple command-line number guessing game written in Java.
+Sample solution for the https://roadmap.sh/projects/number-guessing-game challenge from https://roadmap.sh/
 
 ## Requirements
 
