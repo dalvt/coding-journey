@@ -1,29 +1,26 @@
-# Number Guessing Game
+# Roadmap.sh Projects
 
-A simple command-line number guessing game written in Java.
-Sample solution for the https://roadmap.sh/projects/number-guessing-game challenge from https://roadmap.sh/
+My solutions for the projects from [roadmap.sh](https://roadmap.sh/projects).
 
-## Requirements
+A collection of hands-on projects I build while learning, organized by area.
 
-- Java (JDK) installed
+## Structure
+
+- [BackendProjects/](BackendProjects/) — Backend and CLI projects
+
+## Projects
+
+| Project | Area | Language | Status |
+| ------- | ---- | -------- | ------ |
+| [Number Guessing Game](BackendProjects/number-guessing-game/) | Backend | Java | Done |
 
 ## How to Run
 
-Compile the Java file:
+Each project has its own README with setup and run instructions.
 
-```sh
-cd number-guessing-game && javac numberGuessingGame.java
-```
+## Roadmap
 
-Run the game:
+- [ ] Add more roadmap.sh projects
+- [ ] Expand into other areas (Frontend, DevOps, etc.)
 
-```sh
-java numberGuessingGame
-```
-
-## How to Play
-
-1. Pick a difficulty level (Easy: 10 chances, Medium: 5 chances, Hard: 3 chances).
-2. Guess a number between 1 and 100. The game tells you if your guess is too high or too low.
-3. Guess the correct number before you run out of chances.
-4. After each round, you can choose to play again or exit.
+_Learning is a journey, not a destination._
