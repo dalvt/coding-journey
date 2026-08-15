@@ -37,8 +37,14 @@ public class Task {
     public String toJson() {
         return String.format(
             "{\"id\": %d, \"description\": \"%s\", \"status\": \"%s\"}",
-            this.id, this.description, this.state
+            this.id, escape(this.description), this.state
         );
+    }
+
+    private static String escape(String text) {
+        return text.replace("\\", "\\\\")
+                   .replace("\"", "\\\"")
+                   .replace("\n", "\\n");
     }
     
 }

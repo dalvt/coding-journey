@@ -5,13 +5,19 @@ public class TaskManager {
     private ArrayList<Task> tasks;
 
     public TaskManager() {
-        tasks = new ArrayList<>();
+        tasks = TaskJson.load();
+        for (Task task : tasks) {
+            if (task.getId() > ID) {
+                ID = task.getId();
+            }
+        }
     }
 
     public void addTask(String description) {
         ID++;
         Task task = new Task(description, ID, "TODO");
         tasks.add(task);
+        TaskJson.save(tasks);
     }
 
     public void deleteTask(int id) {
@@ -21,6 +27,7 @@ public class TaskManager {
                 break;
             }
         }
+        TaskJson.save(tasks);
     }
 
     public void updateTask(String newDescription, int id) {
@@ -29,6 +36,7 @@ public class TaskManager {
                 tasks.get(i).changeDescription(newDescription);
             }
         }
+        TaskJson.save(tasks);
     }
 
     public void markInProgress(int id) {
@@ -37,6 +45,7 @@ public class TaskManager {
                 tasks.get(i).inProgress();
             }
         }
+        TaskJson.save(tasks);
     }
 
     public void markDone(int id) {
@@ -45,6 +54,7 @@ public class TaskManager {
                 tasks.get(i).done();
             }
         }
+        TaskJson.save(tasks);
     }
 
     public void list() {
